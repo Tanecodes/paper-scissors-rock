@@ -29,6 +29,12 @@ h1{
   font-size: 3rem;
 }
 
+#buttonContainer{
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+}
+
 button{
   font-size: 2rem;
   padding: 10px;
@@ -48,4 +54,23 @@ button:hover{
 button:active{
   color: rgb(0, 174, 255);
   background-color: white;
+}
+
+#showCase{
+  text-align: center;
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+
+#playerResult{
+  align-self: flex-start;
+}
+
+#computerResult{
+  align-self: flex-start;
+}
+
+#result{
+  text-shadow: 0px 0px 10px red;
+  color: white;
 }
