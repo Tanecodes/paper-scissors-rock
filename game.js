@@ -1,18 +1,25 @@
-const rockBtn = document.getElementById("rock").addEventListener("click",function(){
-  playerResult.textContent = "player: ROCK!";
-  computerResult.textContent = gameLoop[Math.floor(Math.random()*3)];
-});
-const paperBtn = document.getElementById("paper").addEventListener("click",function(){
-  playerResult.textContent = "player: PAPER!"
-  computerResult.textContent = gameLoop[Math.floor(Math.random()*3)];
-});
-const scissorsBtn = document.getElementById("scissors").addEventListener("click",function(){
-  playerResult.textContent = "player: SCISSORS!";
-  computerResult.textContent = gameLoop[Math.floor(Math.random()*3)];
-});
+const rockBtn = document.getElementById("rock");
+const paperBtn = document.getElementById("paper");
+const scissorsBtn = document.getElementById("scissors");
 
-let gameLoop = ["computer: ROCK!","computer:PAPER!","computer:SCISSORS!"];
-let playerResult = document.getElementById("playerResult");
+let gameLoop = ["rock!","paper!","scissors!"];
+
 let computerResult = document.getElementById("computerResult");
-let result = document.getElementById("result");
+let playerResult = document.getElementById("playerResult");
+let winMessage = document.getElementById("result");
+let computerChoice = gameLoop[Math.round(Math.random()*2)];
 
+
+rockBtn.addEventListener("click",function(){
+  playerResult.textContent = gameLoop[0];
+  let computerChoice = gameLoop[Math.round(Math.random()*2)];
+  computerResult.textContent = computerChoice;
+
+  if(computerChoice === gameLoop[0]){
+    winMessage.textContent = "ITS A TIE!";
+  }else if(computerChoice === gameLoop[1]){
+    winMessage.textContent = "YOU LOSE!";
+  }else{
+    winMessage.textContent = "YOU WIN!"
+  }
+});
