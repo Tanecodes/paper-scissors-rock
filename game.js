@@ -20,7 +20,7 @@ rockBtn.addEventListener("click",function(){
   }else if(computerChoice === gameLoop[1]){
     winMessage.textContent = "YOU LOSE!";
   }else{
-    winMessage.textContent = "YOU WIN!"
+    winMessage.textContent = "YOU WIN!";
   }
 });
 
