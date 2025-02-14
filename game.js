@@ -23,3 +23,31 @@ rockBtn.addEventListener("click",function(){
     winMessage.textContent = "YOU WIN!"
   }
 });
+
+paperBtn.addEventListener("click",function(){
+  playerResult.textContent = gameLoop[1];
+  let computerChoice = gameLoop[Math.round(Math.random()*2)];
+  computerResult.textContent = computerChoice;
+
+  if(computerChoice === gameLoop[1]){
+    winMessage.textContent = "ITS A TIE!";
+  }else if(computerChoice === gameLoop[2]){
+    winMessage.textContent = "YOU LOSE!";
+  }else{
+    winMessage.textContent = "YOU WIN!";
+  }
+});
+
+scissorsBtn.addEventListener("click",function(){
+  playerResult.textContent = gameLoop[2];
+  let computerChoice = gameLoop[Math.round(Math.random()*2)];
+  computerResult.textContent = computerChoice;
+
+  if(computerChoice === gameLoop[2]){
+    winMessage.textContent = "ITS A TIE!";
+  }else if(computerChoice === gameLoop[0]){
+    winMessage.textContent = "YOU LOSE!";
+  }else{
+    winMessage.textContent = "YOU WIN!";
+  }
+});
